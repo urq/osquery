@@ -1,0 +1,4 @@
+exec 2>&1
+exec <%= ::File.join(node['osquery']['install_path'], 'bin', 'osqueryd') %> \
+        --config_path <%= node['osquery']['config_path'] %> \
+        --osquery_log_dir <%= node['osquery']['log_dir'] %>
